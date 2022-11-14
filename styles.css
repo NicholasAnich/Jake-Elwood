@@ -2,8 +2,8 @@
     --primary-color: #f18119;
     --secondary-color: #000000;
     --primary-font-color: #404040;
-    --pure-whire: #fff;
-    --primary-background: #ffe600;
+    --pure-white: #fff;
+    --accent: #ffe600;
 }
 
 *,
@@ -15,25 +15,82 @@
 body {
     margin: 0;
     font-family: "Montserrat", sans-serif;
+    color: var(--primary-font-color);
+    line-height: 1.6;
 }
 
-h1 {
-    font-size: 48px;
+/* =============
+    Typography
+================ */
+
+h1,
+h2,
+strong {
+    font-weight: 700;
 }
 
-h2 {
-    font-size: 18px;
+.accent-color {
+    color: var(--accent);
 }
 
-.intro {
-    font-size: 18px;
+.hero-title {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-bottom: 0;
 }
 
-button {
-    font-size: 14px;
+.section-title {
+    font-size: 1.125rem;
+    color: #000000;
+    margin-top: 1.25em;
 }
 
-nav {
-    font-size: 14px;
-    background-color: var(--secondary-color);
+/* buttons */
+
+.btn {
+    padding: 0.5em 1.75em;
+    font-weight: 700;
+    margin-top: 0.5em;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #000000;
+    justify-self: start;
+}
+/* ============
+    general layout
+=============== */
+
+.main-grid {
+    display: grid;
+    grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(1em, 1fr);
+}
+
+/* ============
+    hero area
+=============== */
+
+.hero {
+    background-image: url(img/hero-bg.jpg);
+    padding: 4em 0;
+    color: var(--pure-white);
+}
+
+.hero > * {
+    grid-column: 2 / -2;
+}
+
+/* ============
+    info section
+=============== */
+
+.info {
+    padding: 4em 0;
+    text-align: center;
+}
+
+.col {
+    grid-column: 2 / -2;
 }
