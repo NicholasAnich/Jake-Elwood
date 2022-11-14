@@ -80,6 +80,12 @@ strong {
     background: black;
 }
 
+.header-home {
+    background: transparent;
+    position: absolute;
+    width: 100%;
+}
+
 .header-content {
     display: flex;
     grid-column: 2 / -2;
@@ -173,6 +179,10 @@ strong {
     .nav-link {
         font-size: 16px;
     }
+
+    .header-home .nav {
+        background: transparent;
+    }
 }
 
 /* footer */
@@ -245,12 +255,19 @@ strong {
     background-image: url(img/hero-bg.jpg);
     background-size: cover;
     background-position: bottom;
-    padding: 4em 0;
+    padding: 8em 0 4em;
     color: var(--pure-white);
 }
 
 .hero > * {
     grid-column: 2 / -2;
+    /* margin-right: 20%; */
+}
+
+@media (min-width: 400px) {
+    .hero > * {
+        margin-right: 20%;
+    }
 }
 
 @media (min-width: 600px) {
